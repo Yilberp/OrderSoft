@@ -27,3 +27,13 @@ function prevSlideText() {
     j = (j - 1 + sliderText.length) % sliderText.length;
     sliderText[j].classList.add('active');
 }
+
+window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("header").style.background = "rgba(0, 0, 0, 0.7)";
+            } else {
+                document.getElementById("header").style.background = "transparent";
+            }
+        }

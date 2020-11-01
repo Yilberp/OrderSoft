@@ -27,6 +27,7 @@ header{
     justify-content: space-between;
     z-index: 1000;
     padding: 20px 50px;
+    background: transparent;
 }
 header .logo{
     position: relative;
