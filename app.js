@@ -33,10 +33,19 @@ function prevSlideText() {
 
 window.onscroll = function () { scrollFunction() };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("header").style.background = "rgba(0, 0, 0, 0.7)";
-            } else {
-                document.getElementById("header").style.background = "transparent";
-            }
-        }
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("header").style.background = "rgba(0, 0, 0, 0.7)";
+    } else {
+        document.getElementById("header").style.background = "transparent";
+    }
+}
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
