@@ -59,7 +59,7 @@ function openModal(){
 function registerModal(){
     document.getElementById("fregister").style.display = "block";
     document.getElementById("flogin").style.display = "none";
-    //document.getElementById("id01").style.overflow = "hidden";
+    document.getElementById("id01").style.overflow = "hidden";
 }
 function loginModal(){
     document.getElementById("fregister").style.display = "none";
