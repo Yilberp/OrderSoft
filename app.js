@@ -2,6 +2,9 @@ const imgBx = document.querySelector('.imgBx');
 const slider = imgBx.getElementsByTagName('img');
 let i = 0;
 
+setInterval(() => nextSlide(), 3000);
+setInterval(() => nextSlideText(), 3000);
+
 function nextSlide() {
     slider[i].classList.remove('active');
     i = (i + 1) % slider.length;
