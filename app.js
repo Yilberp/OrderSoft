@@ -2,8 +2,8 @@ const imgBx = document.querySelector('.imgBx');
 const slider = imgBx.getElementsByTagName('img');
 let i = 0;
 
-setInterval(() => nextSlide(), 3000);
-setInterval(() => nextSlideText(), 3000);
+setInterval(() => nextSlide(), 4000);
+setInterval(() => nextSlideText(), 4000);
 
 function nextSlide() {
     slider[i].classList.remove('active');
@@ -48,4 +48,21 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+function openModal(){
+    document.getElementById('id01').style.display="block";
+    if (document.getElementById("flogin").style.display == "none") {
+        document.getElementById("flogin").style.display = "block";
+        document.getElementById("fregister").style.display = "none";
+    }
+}
+function registerModal(){
+    document.getElementById("fregister").style.display = "block";
+    document.getElementById("flogin").style.display = "none";
+    //document.getElementById("id01").style.overflow = "hidden";
+}
+function loginModal(){
+    document.getElementById("fregister").style.display = "none";
+    document.getElementById("flogin").style.display = "block";
+    
 }
