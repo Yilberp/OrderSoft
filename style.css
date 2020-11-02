@@ -214,12 +214,14 @@ form {
     padding: 14px 20px;
     margin: 8px 0;
     width: 100%;
+    border-radius: 5px;
 }
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: #f00;
     cursor: pointer;
+    border-radius: 5px;
 }
 /* The "Forgot password" text */
 span.psw {
@@ -237,7 +239,7 @@ span.psw {
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
-    padding-top: 60px;
+    padding: 10% 0;
   }
   .login--inpt{
     width: 100%;
@@ -246,13 +248,15 @@ span.psw {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius: 5px;
   }
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
     margin: 10px auto; 
     border: 1px solid #888;
-    width: 60%; 
+    border-radius: 10px;
+    width: 350px; 
   }
   
   /* The Close Button */
@@ -280,6 +284,7 @@ span.psw {
   }
   .container__login{
     padding: 16px;
+    border-radius: 10px;
   }
   @-webkit-keyframes animatezoom {
     from {-webkit-transform: scale(0)}
