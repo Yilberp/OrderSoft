@@ -1,60 +1,81 @@
 header{
     position: fixed;
-    top: 0;
-    left: 0;
+    /*top: 0;
+    left: 0;*/
     width: 100%;
     display: flex;
-    justify-content: space-between;
     z-index: 1000;
-    padding: 20px 50px;
     background: transparent;
 }
-header .logo{
-    position: relative;
+.header__container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    padding-left: calc(1440px * (1 / 24));
+    padding-right: calc(1440px * (1 / 24));
+}
+.list__content{
+    display: flex;
+    justify-content: space-between;
+}
+.h__container--logosearch{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.logosearch{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    margin-right: 3vw;
     color: #fff;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 2em;
-    text-decoration: none;
 }
 .search{
-    background-color: #FFFFFF;
-    border-radius: 5px;
+    min-width: 170px;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
-    height: 30px;
-    min-width: 170px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #111;
+    height: 35px;
 }
 .search__f{
-    width: 90%;
-    height: 100%;
+    width: 85%;
+    border-radius: 5px;
+    border: none;
 }
 .search__f--input{
     width: 100%;
-    height: 100%;
-    border: none;
+    font-size: 14px;
 }
-.search__f--input:focus{
-    outline: none;
-}
-.search span{
+.search--icon{
     cursor: pointer;
+    color: #000000;
+    width: 20px;
+    background-color: transparent;
 }
-header ul{
-    position: relative;
+.list__ul{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    width: 40%;
 }
-header ul li{
-    position: relative;
-    list-style: none;
-    margin-left: 40px;
+.list__ul__li{
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
-header ul li a, 
-header ul li button{
+.list__ul__li--a{
     color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
+}
+.cart--icon{
+    color: #fff;
 }

@@ -114,7 +114,7 @@ body{
     text-transform: uppercase;
 }
 .controlIzq > span, .controlDer > span{
-    color: #7E7F9A;
+    color: #7E7F9A !important;
     opacity: .6;
     transition: .4s;
 }
@@ -144,6 +144,7 @@ form {
     margin: 8px 0;
     width: 100%;
     border-radius: 5px;
+    color: #fff;
 }
 .cancelbtn {
     width: auto;
@@ -151,6 +152,7 @@ form {
     background-color: #f00;
     cursor: pointer;
     border-radius: 5px;
+    color: #fff;
 }
 
 .modal {
