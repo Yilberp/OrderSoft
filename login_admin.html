@@ -9,21 +9,29 @@
 </head>
 <body>
     <header id="header">
-        <a href="#" class="logo">OrderSoft</a>
-        <ul>
-            <li><a href="#">Perfil</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Supervisor</a></li>
-        </ul>
+        <div class="header__container list__content">
+            <div class="h__container--logosearch">
+                <div class="logosearch">
+                    <a href="#" class="logo">OrderSoft</a>
+                </div>
+            </div>
+            <ul class="list__ul">
+                <li class="list__ul__li"><button class="login--btn cart--icon" onclick="openModal()">Login</button></li>
+                <li class="list__ul__li"><a class="list__ul__li--a" href="#">Categorias</a></li>
+                <li class="list__ul__li"><a class="list__ul__li--a" href="#">Preguntas</a></li>
+                <li class="list__ul__li"><a class="list__ul__li--a" href="#">Contacto</a></li>
+            </ul>
+                
+        </div>
     </header>
     <main class="a_container">
         <div class="a_container__login">
-            <form>
-                <label for="email">Usuario</label>
-                <input type="email" placeholder="Correo electronico" name="email">
+            <form class="admin__form">
+                <label class="admin__form--lbl" for="email">Usuario</label>
+                <input class="admin__form--inpt" type="email" placeholder="Correo electronico" name="email">
 
-                <label for="passw">Contraseña</label>
-                <input type="password" placeholder="Contraseña" name="passw">
+                <label class="admin__form--lbl" for="passw">Contraseña</label>
+                <input class="admin__form--inpt" type="password" placeholder="Contraseña" name="passw">
 
                 <button class="form--btn">Iniciar sesion</button>
             </form>    
