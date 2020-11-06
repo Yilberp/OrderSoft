@@ -1,8 +1,7 @@
 header{
     position: fixed;
-    /*top: 0;
-    left: 0;*/
     width: 100%;
+    max-height: 55px;
     display: flex;
     z-index: 1000;
     background: transparent;
@@ -10,7 +9,7 @@ header{
 .header__container{
     margin: 0 auto;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1600px;
     padding-left: calc(1440px * (1 / 24));
     padding-right: calc(1440px * (1 / 24));
 }
@@ -65,7 +64,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 40%;
+    width: 45%;
 }
 .list__ul__li{
     text-align: center;
@@ -78,4 +77,93 @@ header{
 }
 .cart--icon{
     color: #fff;
+}
+.icon{
+    margin: 0;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+.icon span{
+    position: relative;
+    z-index: 2;
+}
+.icon .modal__cart{
+    position: absolute;
+    top: 0;
+    width: 200px;
+    font-size: 1.2em;
+    font-weight: 500;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.modal__cart:before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: -5px;
+    left: 50%;
+    background: white;
+    transform: translateX(-50%) rotate(45deg);
+}
+.list__ul__li:hover .modal__cart{
+    visibility: visible;
+    top: 40px;
+    opacity: 1;
+}
+.modal__cart__content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.modal__cart__content ul{
+    width: 100%;
+}
+.modal__cart__content ul li{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #8f8f8f;
+    margin-bottom: 4px;
+}
+.modal__cart__content--img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin-bottom: 4px;
+    margin-right: 1vw;
+}
+@media (min-width: 1900px){
+    .logo{
+        font-weight: 500;
+        font-size: 2.5em;
+    }
+    .search__f--input{
+        font-size: 18px;
+    }
+    .list__ul__li--a{
+        font-size: 1.6em;
+    }
+    .login--btn{
+        font-size: 1.6em;
+    }
+    .icon .modal__cart{
+        width: 300px;
+        font-size: 1.5em;
+    }
+    .modal__cart__content--img{
+        width: 100px;
+        height: 85px;
+        margin-right: 2vw;
+    }
 }

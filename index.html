@@ -29,14 +29,45 @@
                     </div>
                 </div>
             </div>
+
             <ul class="list__ul">
-                <li class="list__ul__li"><button class="login--btn cart--icon" onclick="openModal()">Login</button></li>
+                <li class="list__ul__li"><button class="login--btn cart--icon" onclick="openModal()">Login</button>
+                </li>
                 <li class="list__ul__li"><a class="list__ul__li--a" href="#">Categorias</a></li>
                 <li class="list__ul__li"><a class="list__ul__li--a" href="#">Preguntas</a></li>
                 <li class="list__ul__li"><a class="list__ul__li--a" href="#">Contacto</a></li>
-                <li class="list__ul__li"><a class="list__ul__li--a" href="#"><span class="material-icons cart--icon">shopping_cart</span></a></li>
+                <li class="list__ul__li">
+                    <a href="#">
+                        <div class="icon">
+                            <span class="material-icons md-18 cart--icon">shopping_cart</span>
+                            <div class="modal__cart">
+                                <div class="modal__cart__content">
+                                    <ul>
+                                        <li>
+                                            <img class="modal__cart__content--img" src="img/img1-small.jpg"
+                                                alt="producto1">
+                                            <div class="modal__cart__content--detail">
+                                                <p>Producto 1</p>
+                                                <span>$9.99</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img class="modal__cart__content--img" src="img/burger.png" alt="producto1">
+                                            <div class="modal__cart__content--detail">
+                                                <p>Producto 2</p>
+                                                <span>$9.99</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="modal__cart__options">
+                                        Subtotal: $<span>20.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
             </ul>
-                
         </div>
     </header>
     <!-- The Modal -->
@@ -107,10 +138,24 @@
     </div>
     <section class="banner">
         <div class="imgBx">
-            <img src="img/img1-medium.jpg" class="active">
-            <img src="img/img2-medium.jpg">
-            <img src="img/img3-medium.jpg">
-            <img src="img/img4-medium.jpg">
+            <picture>
+                <source media="(min-width: 1700)" srcset="./img/img1-large.jpg">
+                <source media="(min-width: 700)" srcset="./img/img1-medium.jpg">
+                <img src="./img/img1-small.jpg" class="active">
+            </picture>
+            <picture>
+                <source media="(min-width: 1700)" srcset="./img/img2-large.jpg">
+                <img src="./img/img2-medium.jpg">
+            </picture>
+            <picture>
+                <source media="(min-width: 1700)" srcset="./img/img3-large.jpg">
+                <img src="./img/img3-medium.jpg">
+            </picture>
+            <picture>
+                <source media="(min-width: 1700)" srcset="./img/img4-large.jpg">
+                <img src="./img/img4-medium.jpg">
+            </picture>
+            
         </div>
         <div class="contentBx">
             <div class="active">
