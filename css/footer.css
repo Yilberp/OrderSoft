@@ -180,3 +180,48 @@ footer
 }
 
 .f-ordersoft--a:hover { text-decoration: underline; }
+
+@media (max-width: 1024px)
+{
+    .container__content
+    {
+        padding-left: calc(1024px * (1 / 24));
+        padding-right: calc(1024px * (1 / 24));
+    }
+}
+@media (max-width: 768px)
+{
+    .c-promo-index { flex-direction: column; }
+    .f__content { flex-direction: column; }
+    .f__category-help, .f__category, .f__help, .f__subscribe { width: 100%; }
+    .f__subscribe__content { padding-top: 30px; }
+}
+@media (max-width: 425px)
+{
+    .container__content
+    {
+        padding-left: calc(425px * (1 / 24));
+        padding-right: calc(425px * (1 / 24));
+    }
+   .f__category-help { flex-direction: column; }
+   .f__category-help { min-width: 100%; }
+   .f__category { padding-bottom: 30px; }
+}
+@media (max-width: 375px)
+{
+    .container__content
+    {
+        padding-left: calc(375px * (1 / 24));
+        padding-right: calc(375px * (1 / 24));
+    }
+}
+
+@media (max-width: 320px)
+{
+    .container__content
+    {
+        padding-left: calc(320px * (1 / 24));
+        padding-right: calc(320px * (1 / 24));
+    }
+    
+}
