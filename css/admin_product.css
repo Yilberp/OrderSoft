@@ -170,6 +170,13 @@ header{
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+    .f__content--register{
+        max-height: 500px;
+    }
+    .f__content--register img{
+        max-height: 370px;
+        object-fit: scale-down;
+    }
     .data--btn{
         font-size: 1.6em;
     }
