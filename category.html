@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+    <title>Categorias</title>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0dc3b1d201.js" crossorigin="anonymous"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/category.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/admin_product.css">
 </head>
-
 <body>
     <div class="wrapper">
         <header id="header">
@@ -20,32 +22,68 @@
                 </div>
                 <ul class="list__ul">
                     <li class="list__ul__li"><a class="list__ul__li--a" href="register_product.html">Productos</a></li>
-                    <li class="list__ul__li"><a class="list__ul__li--a" href="category.html">Categorias</a></li>
+                    <li class="list__ul__li"><a class="list__ul__li--a" href="#">Categorias</a></li>
                     <li class="list__ul__li"><a class="list__ul__li--a" href="#">Preguntas</a></li>
-                    <li class="list__ul__li"><a class="list__ul__li--a" href="#">Perfil</a></li>
+                    <li class="list__ul__li"><a class="list__ul__li--a" href="admin_profile.html">Perfil</a></li>
                 </ul>
             </div>
         </header>
-        <section class="container--register">
-            <div class="container__content--register">
-                <form class="container__content--formp">
-
-                    <label class="data--lbl" for="user">Usuario</label>
-                    <input class="data--inpt" type="text" placeholder="Nombre de usuario" name="user" required>
     
-                    <label class="data--lbl" for="email">Correo</label>
-                    <input class="data--inpt" type="email" placeholder="Correo electronico" name="email" required>
-    
-                    <label class="data--lbl" for="passw">Nueva Contraseña</label>
-                    <input class="data--inpt" type="password" placeholder="Nueva contraseña" name="passw" required>
-    
-                    <label class="data--lbl" for="passw2">Confirmar Nueva Contraseña</label>
-                    <input class="data--inpt" type="password" placeholder="Repita la nueva contraseña" name="passw2" required>
-
-                    <button class="data--btn" type="submit">Actualizar Datos</button>
+        <section class="container__category">
+            <div class="register__category">
+                <form>
+                    <label class="data--lbl" for="nombre">Nombre</label>
+                    <input class="data--inpt" type="text" placeholder="Nombre de la Categoria" name="nombre" required>
+                    <button class="category--btn">Agregar Categoria</button>
                 </form>
             </div>
+            <table class="table__content">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hamburguesas</td>
+                        <td>
+                            <span class="material-icons">create</span>
+                            <span class="material-icons action-icon">delete</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hot Dog</td>
+                        <td>
+                            <span class="material-icons">create</span>
+                            <span class="material-icons action-icon">delete</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sandwich</td>
+                        <td>
+                            <span class="material-icons">create</span>
+                            <span class="material-icons action-icon">delete</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Salchipapa</td>
+                        <td>
+                            <span class="material-icons">create</span>
+                            <span class="material-icons action-icon">delete</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pizza</td>
+                        <td>
+                            <span class="material-icons">create</span>
+                            <span class="material-icons action-icon">delete</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
+    
         <footer>
             <div class="container">
                 <div class="f__content container__content">
@@ -126,7 +164,5 @@
             </div>
         </footer>
     </div>
-    <script src="preloadImage.js"></script>
 </body>
-
 </html>
