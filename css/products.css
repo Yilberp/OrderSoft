@@ -36,6 +36,31 @@ header{
 .aside{
     grid-area: aside;
 }
+.aside ul li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.aside ul li a{
+    cursor: pointer;
+    font-size: 1.3em;
+}
+.form-price{
+    width: 120px;
+}
+.form-price input{
+    width: 100%;
+    border: 1px solid #f00;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    padding: 5px;
+}
+.form-price button{
+    width: 100%;
+    color: white;
+    background-color: #f00;
+    border-radius: 2px;
+    cursor: pointer;
+}
 .list__products{
     grid-area: product;
     display: grid;
@@ -66,7 +91,9 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 125px;
+    width: 130px;
+    font-weight: bold;
+    font-size: 1.05em;
 }
 .container__products--options{
     display: flex;
@@ -97,7 +124,9 @@ header{
     }
     .aside{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        padding-left: calc(1440px * (1 / 24));
+        padding-right: calc(1440px * (1 / 24));
     }
     .list__products{
         padding-left: calc(1440px * (1 / 24));
