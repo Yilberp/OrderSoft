@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0dc3b1d201.js" crossorigin="anonymous"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+
+<body class="grid-container">
+    <header id="header">
+        <div class="header__container list__content">
+            <div class="h__container--logosearch">
+                <div class="logosearch">
+                    <a href="#" class="logo">OrderSoft</a>
+                    <div class="search">
+                        <form class="search__f">
+                            <input class="search__f--input" type="text" name="search"
+                                placeholder="Burger, hot dog, sandwich...">
+                        </form>
+                        <span class="search--icon material-icons md-18">search</span>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="list__ul">
+                <li class="list__ul__li"><button class="login--btn cart--icon" onclick="openModal()">Login</button>
+                </li>
+                <li class="list__ul__li"><a class="list__ul__li--a" href="#">Categorias</a></li>
+                <li class="list__ul__li"><a class="list__ul__li--a" href="#">Preguntas</a></li>
+                <li class="list__ul__li"><a class="list__ul__li--a" href="#">Contacto</a></li>
+                <li class="list__ul__li">
+                    <a href="#">
+                        <div class="icon">
+                            <span class="material-icons md-18 cart--icon">shopping_cart</span>
+                            <div class="modal__cart">
+                                <div class="modal__cart__content">
+                                    <ul>
+                                        <li>
+                                            <img class="modal__cart__content--img" src="img/img1-small.jpg"
+                                                alt="producto1">
+                                            <div class="modal__cart__content--detail">
+                                                <p>Producto 1</p>
+                                                <span>$9.99</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img class="modal__cart__content--img" src="img/burger.png" alt="producto1">
+                                            <div class="modal__cart__content--detail">
+                                                <p>Producto 2</p>
+                                                <span>$9.99</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="modal__cart__options">
+                                        Subtotal: $<span>20.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+
+        <!-- Modal Content Login -->
+        <form id="flogin" class="modal-content animate">
+
+            <div class="container__login">
+                <label for="uname"><b>Usuario</b></label>
+                <input class="login--inpt" type="text" placeholder="Correo electronico" name="uname" required>
+
+                <label for="psw"><b>Contraseña</b></label>
+                <input class="login--inpt" type="password" placeholder="Ingrese Contraseña" name="psw" required>
+
+                <button class="login--btn2" type="submit">Iniciar sesion</button>
+
+            </div>
+
+            <div class="container__login__options">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancelar</button>
+                <div class="container__login__options--span">
+                    <span><a href="#">¿Olvidó la contraseña?</a></span>
+                    <span class="btn--register" onclick="registerModal()">Crea tu cuenta</span>
+                </div>
+            </div>
+        </form>
+
+        <!-- Modal Content Register -->
+        <form id="fregister" class="modal-content animate" style="display: none;">
+
+            <div class="container__login">
+
+                <input class="register--inpt stylereg--inpt" type="text" placeholder="Nombres" name="uname" required>
+
+                <input class="register--inpt register--inpt--center" type="text" placeholder="Apellidos" name="uname"
+                    required>
+
+                <input class="register--inpt register--inpt--center" type="email" placeholder="Correo electronico"
+                    name="uname" required>
+
+                <input class="register--inpt register--inpt--center" type="password" placeholder="Ingrese Contraseña"
+                    name="psw" required>
+
+                <input class="register--inpt register--inpt--center" type="text" placeholder="Documento" name="uname"
+                    required>
+
+                <input class="register--inpt register--inpt--center" type="text" placeholder="Celular" name="uname"
+                    required>
+
+                <input class="register--inpt stylereg--inpt2" type="text" placeholder="Direccion" name="uname" required>
+
+                <button class="login--btn2" type="submit">Registrarme</button>
+
+            </div>
+
+            <div class="container__login__options">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancelar</button>
+                <div class="container__login__options--span">
+                    <span class="btn--register" onclick="loginModal()">Ya tengo cuenta</span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <section class="main__container">
+        <aside class="aside">
+            <ul>
+                <li>Hamburguesas</li>
+                <li>Pizza</li>
+                <li>Hot Dog</li>
+            </ul>
+        </aside>
+        <article class="list__products">
+            <div class="container__products">
+                <div class="container__products--details">
+                    <img class="container__products--img" src="img/burger.png" alt="Producto">
+                    <div class="container__products--title">
+                        <p>Hamburguesa Mixta</p>
+                        <span>$9.99</span>
+                    </div>
+                </div>
+                <div class="container__products--options">
+                    <span>150gramos de carne kobe, 150gramos de pollo desmechado,1 rebanada de jamon, 1 rebanada de
+                        queso,
+                        50gramos de cebolla caramelizada,lechuga,tomate.
+                    </span>
+                    <button>Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="container__products">
+                <div class="container__products--details">
+                    <img class="container__products--img" src="img/burger.png" alt="Producto">
+                    <div class="container__products--title">
+                        <p>Hamburguesa Mixta</p>
+                        <span>$9.99</span>
+                    </div>
+                </div>
+                <div class="container__products--options">
+                    <span>150gramos de carne kobe, 150gramos de pollo desmechado,1 rebanada de jamon, 1 rebanada de
+                        queso,
+                        50gramos de cebolla caramelizada,lechuga,tomate.
+                    </span>
+                    <button>Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="container__products">
+                <div class="container__products--details">
+                    <img class="container__products--img" src="img/burger.png" alt="Producto">
+                    <div class="container__products--title">
+                        <p>Hamburguesa Mixta</p>
+                        <span>$9.99</span>
+                    </div>
+                </div>
+                <div class="container__products--options">
+                    <span>150gramos de carne kobe, 150gramos de pollo desmechado,1 rebanada de jamon, 1 rebanada de
+                        queso,
+                        50gramos de cebolla caramelizada,lechuga,tomate.
+                    </span>
+                    <button>Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="container__products">
+                <div class="container__products--details">
+                    <img class="container__products--img" src="img/burger.png" alt="Producto">
+                    <div class="container__products--title">
+                        <p>Hamburguesa Mixta</p>
+                        <span>$9.99</span>
+                    </div>
+                </div>
+                <div class="container__products--options">
+                    <span>150gramos de carne kobe, 150gramos de pollo desmechado,1 rebanada de jamon, 1 rebanada de
+                        queso,
+                        50gramos de cebolla caramelizada,lechuga,tomate.
+                    </span>
+                    <button>Ver Detalles</button>
+                </div>
+            </div>
+            
+            <div class="container__products">
+                <div class="container__products--details">
+                    <img class="container__products--img" src="img/burger.png" alt="Producto">
+                    <div class="container__products--title">
+                        <p>Hamburguesa Mixta</p>
+                        <span>$9.99</span>
+                    </div>
+                </div>
+                <div class="container__products--options">
+                    <span>150gramos de carne kobe, 150gramos de pollo desmechado,1 rebanada de jamon, 1 rebanada de
+                        queso,
+                        50gramos de cebolla caramelizada,lechuga,tomate.
+                    </span>
+                    <button>Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="container__products">
+                <div class="container__products--details">
+                    <img class="container__products--img" src="img/burger.png" alt="Producto">
+                    <div class="container__products--title">
+                        <p>Hamburguesa Mixta</p>
+                        <span>$9.99</span>
+                    </div>
+                </div>
+                <div class="container__products--options">
+                    <span>150gramos de carne kobe, 150gramos de pollo desmechado,1 rebanada de jamon, 1 rebanada de
+                        queso,
+                        50gramos de cebolla caramelizada,lechuga,tomate.
+                    </span>
+                    <button>Ver Detalles</button>
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="f__content container__content">
+                <div class="f__category-help">
+                    <div class="f__category">
+                        <p class="f--title">Categorias</p>
+                        <ul class="f__ul">
+                            <li class="f__li">
+                                <a class="f__li--a" href="">Burger</a>
+                            </li>
+                            <li class="f__li">
+                                <a class="f__li--a" href="">Pizza</a>
+                            </li>
+                            <li class="f__li">
+                                <a class="f__li--a" href="">Hot Dog</a>
+                            </li>
+                            <li class="f__li">
+                                <a class="f__li--a" href="">Salchipapa</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="f__help">
+                        <p class="f--title">Ayuda</p>
+                        <ul class="f__ul">
+                            <li class="f__li">
+                                <a class="f__li--a" href="">Preguntas frecuentes</a>
+                            </li>
+                            <li class="f__li">
+                                <a class="f__li--a" href="">¿Comó comprar?</a>
+                            </li>
+                            <li class="f__li">
+                                <a class="f__li--a" href="">Actualiza tus datos</a>
+                            </li>
+                            <li class="f__li">
+                                <a class="f__li--a" href="">Promociones vigentes</a>
+                            </li>
+                            <li class="f__li">
+                                <a class="f__li--a" href="">Contacto</a>
+                            </li>
+                        </ul>
+                        <div class="f__paying">
+                            <p class="f--title">Medios de pago</p>
+                            <div class="f__paying__icos">
+                                <img class="f__paying__icos--img" src="img/pagos/nequi.png">
+                                <img class="f__paying__icos--img" src="img/pagos/paypal.png">
+                                <img class="f__paying__icos--img" src="img/pagos/mastercard.png">
+                                <img class="f__paying__icos--img" src="img/pagos/visa.png">
+                                <img class="f__paying__icos--img" src="img/pagos/pse.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="f__subscribe">
+                    <div class="f__subscribe__content">
+                        <p class="f--title">Únete ahora</p>
+                        <div class="f__subscribe__input">
+                            <input class="f__subscribe--input" placeholder="ejemplo@OrderSoft.com" type="text" required>
+                        </div>
+                        <div class="c-promo-index__btn">
+                            <a class="c-promo-index__btn--a" href="">Enviar</a>
+                        </div>
+                        <p class="f__subscribe--p">Al suscribirte aceptas nuestas politicas de tratamiento de datos.</p>
+                    </div>
+                    <div class="f__subscribe__icos">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="f-copyright container__content">
+            <p class="f-copyright--p">© 2020 OrderSoft.</p>
+        </div>
+        <div class="f-ordersoft">
+            <p class="f-ordersoft--p">Desarrollador por el equipo</p>
+            <a class="f-ordersoft--a" href="">ORDERSOFT</a>
+        </div>
+    </footer>
+</body>
+
+</html>
