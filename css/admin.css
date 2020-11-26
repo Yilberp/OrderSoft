@@ -41,6 +41,7 @@ header{
     justify-content: center;
     width: 90%;
     padding: 16px;
+    border: none;
 }
 .admin__form--lbl{
     font-size: 1.1em;
