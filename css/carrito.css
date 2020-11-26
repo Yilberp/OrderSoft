@@ -87,3 +87,39 @@ table td img{
     border: 1px solid #000000;
     display: inline-block;
 }
+.counter{
+    width: 150px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px;
+    border: 1px solid #e5edef;
+    border-radius: 8px;
+}
+.counter button{
+    color: #ff441f;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 34px;
+    height: 34px;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+.counter button:disabled{
+    background-color: #fafaf8!important;
+    color: rgba(255,68,31,.3);
+}
+.counter button:hover{
+    color: #fff;
+    background-color: #ff441f;
+}
+.counter button:disabled:hover{
+    cursor: inherit;
+    color: #ff441f;
+    background-color: #fff;
+}
+.counter div{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
