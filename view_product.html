@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,9 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/view_product.css">
 </head>
+
 <body>
     <header id="header">
         <div class="header__container list__content">
@@ -67,7 +70,35 @@
         </div>
     </header>
 
-
+    <div class="principal__container">
+        <div class="second__container">
+            <div class="second__container--img">
+                <img src="img/burger.png" alt="">
+            </div>
+            <div class="second__container--details">
+                <h2>HAMBURGUESA MIXTA</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veritatis nam sed aperiam nemo repellat earum aliquid dicta minus laborum 
+                quod rerum porro, voluptatem odio? Et quia soluta doloribus ipsam.</p>
+                <form class="form">
+                    <div class="details--price--quantity">
+                        <div class="details--price">
+                            <h3>Precio</h3>
+                            <span>$9.99</span>
+                        </div>
+                        <div class="counter">
+                            <button class="subtract" disabled>-</button>
+                            <div>1</div>
+                            <button>+</button>
+                        </div>
+                        <button type="button" class="data-btn">AÑADIR AL CARRITO</button>
+                    </div>
+                    <textarea class="data--txt" name="desc" rows="9" cols="40"
+                    placeholder="Escribe instrucciones especiales"></textarea>
+                    <button class="data-btn">COMPRAR</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
@@ -149,4 +180,5 @@
         </div>
     </footer>
 </body>
+
 </html>
